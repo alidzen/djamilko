@@ -460,6 +460,7 @@ h5 {
 }
 .features .features-l {
   margin: 70px auto 0;
+  font: bold normal 14px/24px "SegoeUI", sans-serif;
   /* Задаем картинки для каждого элемента */
 }
 .features .features-l li {
