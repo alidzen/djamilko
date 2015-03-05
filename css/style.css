@@ -301,6 +301,9 @@ h5 {
   font: bold normal 16px/46px "SegoeUI", sans-serif;
   color: #000000;
 }
+.header-nav .nav-i a:hover {
+  color: #f05757;
+}
 .header-nav .nav-i .active {
   color: #929292;
 }

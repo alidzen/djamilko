@@ -80,6 +80,7 @@
     a {
       font: bold normal 16px/46px $font-strong;
       color: $color-big;
+      &:hover { color: $color-hover; }
     }
     .active { color: $color-big-active; }
   }
