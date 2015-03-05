@@ -880,6 +880,10 @@ h5 {
   text-decoration: none;
   color: inherit;
 }
+.footer-bottom .design-author a:hover {
+  color: #f05757;
+  border-color: #f05757;
+}
 .footer-bottom .design-author:before {
   content: "";
   display: inline-block;

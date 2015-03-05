@@ -85,7 +85,12 @@
     a {
       border-bottom: 1px solid #fff;
       text-decoration: none;
-      color: inherit; }
+      color: inherit;
+      &:hover {
+        color: $color-hover;
+        border-color: $color-hover;
+      }
+    }
     &:before {
       content: "";
       display: inline-block;
