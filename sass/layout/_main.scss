@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 1600px;
+  height: 588px;
+  background-image: url("../img/top-photo1.jpg");
+  background-position: center;
+  color: $color-white;
+}
+
+.slider-text {
+  position: relative;
+  text-align: center;
+  h4 {
+    width: 540px;
+    margin: 0 auto;
+    padding: 160px 0 18px;
+  }
+  p:first-of-type {
+    width: 630px;
+    margin: 0 auto 46px;
+    font: italic normal 16px/28px $font-strong;
+  }
+
+}
+
+.propose-list {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, .4);
+  li {
+    display: inline-block;
+    height: inherit;
+    text-align: center;
+    vertical-align: middle;
+    /* Хак выравнивания текста */
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 40%;
+    }
+    a {
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+  .propose-i1 { margin-left: 50px; }
+  .propose-i2 { margin-left: 99px; }
+  .propose-i3 { margin-left: 87.5px; }
+  .propose-i4 { margin-left: 71px; }
+  .propose-i5,
+  .propose-i6 { margin-left: 92px; }
+
+  /* стилизуем управление слайдером */
+  .slider-control {
+    position: relative;
+    display: block;
+    width: 280px;
+    margin-left: 78px;
+    margin-top: -20px;
+    li {
+      display: inline-block;
+      font: italic normal 50px/24px $font-numbers;
+    }
+    .arrows {
+      position: absolute;
+      width: sprite-width($arrows, left);
+      height: sprite-height($arrows, left);
+      cursor: pointer;
+    }
+    .left {
+      left: 0;
+      background: sprite($arrows, left) no-repeat;
+      &:hover { background-position: sprite-position($arrows, left-hv); }
+    }
+    .right {
+      right: 0;
+      background: sprite($arrows, right) no-repeat;
+      &:hover { background-position: sprite-position($arrows, right-hv); }
+    }
+  }
+}
+/* / SLIDER */
+
+/* ABOUT */
+.about {
+  text-align: center;
+  h1 {
+    position: relative;
+    margin: 88px auto 64px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 69px;
+      display: block;
+      width: sprite-width($other, divider);
+      height: 2px;
+      margin-left: -20px;
+      background: sprite($other, divider) no-repeat;
+    }
+  }
+  p {
+    position: relative;
+    width: 802px;
+    margin: 0 auto;
+    line-height: 28px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 110px;
+      display: block;
+      width: sprite-width($other, divider-www);
+      height: sprite-height($other, divider-www);
+      margin-left: -51.5px;
+      background: sprite($other, divider-www) no-repeat;
+    }
+  }
+}
+/* features */
+.features {
+  h2 { margin-top: 71px; }
+  .features-l {
+    margin: 70px auto 0;
+    li {
+      position: relative;
+      display: inline-block;
+      height: 50px;
+      width: 158px;
+      cursor: pointer;
+      &:not(:first-child) { margin-left: 88px; }
+      &:before {
+        content: "";
+        display: block;
+        width: 158px;
+        height: 158px;
+        background: sprite($features, flag, 6.5px, 6.5px) no-repeat;
+      }
+      &:hover {
+        color: $color-hover;
+        &:before { background-position: sprite-position($features, flag-hv, -5px, 0); }
+      }
+    }
+    /* Задаем картинки для каждого элемента */
+    .features-i2 {
+      &:before { background-position: sprite-position($features, brilliant, 6.5px, 6.5px); }
+      &:hover {
+        &:before { background-position: sprite-position($features, brilliant-hv, -5px, 0); }
+      }
+    }
+    .features-i3 {
+      &:before { background-position: sprite-position($features, package, 6.5px, 6.5px); }
+      &:hover {
+        &:before { background-position: sprite-position($features, package-hv, -5px, 0); }
+      }
+    }
+    .features-i4 {
+      &:before { background-position: sprite-position($features, cup, 6.5px, 6.5px); }
+      &:hover {
+        &:before { background-position: sprite-position($features, cup-hv, -5px, 0); }
+      }
+    }
+  }
+  /* / features-list */
+}
+/* / features */
+
+.features-wrapper {
+  position: relative;
+  height: 490px;
+  margin: 90px auto 0;
+  background: url("/img/bg-line.png") no-repeat;
+}
+
+.features-slider {
+  position: relative;
+  width: 735px;
+  height: 475px;
+  margin: 0 auto;
+  background: url("/img/features/big-romb.png") no-repeat 50% 50%;
+  text-align: center;
+  color: $color-white;
+  .slider-number {
+    width: 100%;
+    padding: 86px 0 79px;
+    font: italic normal 50px/24px $font-numbers;
+  }
+  p:nth-child(2) {
+    width: 285px;
+    margin-bottom: 88px;
+    line-height: 24px;
+  }
+  a {
+    font: 300 normal 14px/24px $font-strong;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    &:hover { text-decoration: underline; }
+  }
+  /* Оформим боковые стрелки псевдо элементами */
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top:50%;
+    display: block;
+    width: sprite-width($arrows, left-hv);
+    height: sprite-height($arrows, left-hv);
+    margin-top: -19px;
+    cursor: pointer;
+  }
+  &:before {
+    background: sprite($arrows, left-hv) no-repeat;
+    left: 0;
+  }
+  &:after {
+    background: sprite($arrows, right-hv);
+    right: 0;
+  }
+}
+/* / ABOUT */
+
+/* BRANDS */
+.brands {
+  position: relative;
+  width: 963px;
+  margin: 107px auto 100px;
+  text-align: center;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 69px;
+    display: block;
+    width: sprite-width($other, divider);
+    height: 2px;
+    margin-left: -20px;
+    background: sprite($other, divider) no-repeat;
+  }
+  .btn-base {
+    margin-top: 38px;
+  }
+}
+
+/* Оформляем список brands-list */
+.brands-l {
+  margin: 53px auto 0;
+  li {
+    float: left;
+    @extend .clearfix;
+    a {
+      display: block;
+      width: 240px;
+      height: 240px;
+    }
+    .brands-i1 { background: sprite($brands, 1); }
+    .brands-i2 {
+      background: sprite($brands, 2, 27px, 113px);
+      &:hover { background-position: sprite-position($brands, 1); }
+    }
+    .brands-i3 { background: sprite($brands, 3, 31.5px, 104.5px); }
+    .brands-i4 { background: sprite($brands, 4, 47px, 108.5px); }
+    .brands-i5 { background: sprite($brands, 5, 42px, 103px); }
+    .brands-i6 { background: sprite($brands, 6, 52.5px, 104px); }
+    .brands-i7 { background: sprite($brands, 7, 66px, 96.5px); }
+    .brands-i8 { background: sprite($brands, 8, 30.5px, 105.5px); }
+    .brands-i9 { background: sprite($brands, 9, 30.5px, 95.5px); }
+    .brands-i10 { background: sprite($brands, 10, 36px, 105px); }
+    .brands-i11 { background: sprite($brands, 11, 52.5px, 81px); }
+    .brands-i12 { background: sprite($brands, 12, 34px, 111.5px); }
+
+  }
+}
+/* / brands list */
+
+/* / BRANDS */
+
+/* CAREER */
+.career {
+  position: relative;
+  width: 1600px;
+  height: 390px;
+  background: url(/img/career-bg.jpg) no-repeat;
+  text-align: center;
+  color: $color-white;
+  h1 {
+    color: inherit;
+    padding-top: 66px;
+    padding-bottom: 66px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 135px;
+      display: block;
+      width: sprite-width($other, divider-white);
+      height: 2px;
+      margin-left: -20px;
+      background: sprite($other, divider-white) no-repeat;
+    }
+  }
+  .btn-white { margin-top: 39px; }
+}
+/* /  CAREER */
+
+/* NEWS */
+.news {
+  width: 1040px;
+  margin: 100px auto 0;
+  text-align: center;
+  h1 {
+    position: relative;
+    margin-bottom: 97px;
+    text-align: inherit;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 69px;
+      display: block;
+      width: sprite-width($other, divider);
+      height: 3px;
+      margin-left: -20px;
+      background: sprite($other, divider) no-repeat;
+    }
+  }
+
+  /* стилизуем управление слайдером */
+  .slider-control {
+    position: relative;
+    display: block;
+    width: 113px;
+    height: 60px;
+    margin: 40px auto;
+    li {
+      display: inline-block;
+    }
+    .separator {
+      width: 1px;
+      height: 60px;
+      border-left: 1px solid #adadad;
+      border-collapse: collapse;
+    }
+    .arrows {
+      position: absolute;
+      top: 50%;
+      margin-top: -11.5px;
+      width: sprite-width($arrows, news-left);
+      height: sprite-height($arrows, news-left);
+      cursor: pointer;
+    }
+    .left {
+      left: 0;
+      background: sprite($arrows, news-left) no-repeat;
+      &:hover { background-position: sprite-position($arrows, news-left-hv); }
+    }
+    .right {
+      right: 0;
+      background: sprite($arrows, news-right) no-repeat;
+      &:hover { background-position: sprite-position($arrows, news-right-hv); }
+    }
+  }
+}
+
+.news-l {
+  @extend .clearfix;
+  [class^="news-i"] {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    &:first-of-type { margin-left: 50px; }
+    background-color: #f9f9f9;
+    &:hover {
+      background-color: #e2e2e2;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        &:after {
+          position: absolute;
+          left: -50px;
+          top: -50px;
+          content: "";
+          display: block;
+          width: 401px;
+          height: 401px;
+          background: sprite($other, line-hv) no-repeat;
+        }
+      }
+    }
+    img {
+      width: 300px;
+      height: 180px;
+    }
+    h5, p {
+      color: $color-big;
+      padding: 7px 20px 0 20px;
+      text-align: left;
+    }
+    p { padding-bottom: 15px; }
+  }
+}
+
+/* / NEWS */
+
+/*
+* END Main
+*
+*/
+

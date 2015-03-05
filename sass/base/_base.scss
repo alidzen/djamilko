@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Base styles.
+   ========================================================================== */
+body {
+  width: 1600px;
+  margin: 0 auto;
+  font: italic normal 16px/26px $base-font;
+  color: $color-main;
+  background-color: #fff;
+}
+
+h1 {
+  font: normal bold 30px/36px $font-strong;
+  color: $color-big;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: italic 18px/32px $base-font;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: 16px/30px $base-font;
+}
+
+h4 {
+  font: normal 300 36px/46px $font-strong;
+  text-transform: uppercase;
+}
+/* заголовок в слайдере */
+
+h5 {
+  font: normal bold 14px/30px $font-strong;
+  text-transform: uppercase;
+}
+
+.strong-text {
+  font: normal bold 14px/24px $font-strong;
+  color: $color-big;
+  text-transform: uppercase;
+}
+/* используется для важного текста */
+
+.sup {
+  vertical-align: super;
+  font: italic normal 24px/24px $font-numbers;
+  letter-spacing: 4.8px;
+  padding-left: 10px;
+}
+/* создаем класс для верхнего регистра в слайдерах */
+
+
+.link-big {
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover { color: $color-hover;}
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after { clear: both; }
+}
+
+
+
+
+
+/*
+* END Base styles.
+*
+*/
