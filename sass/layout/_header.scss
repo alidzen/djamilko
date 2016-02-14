@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Header styles.
+   ========================================================================== */
+
+/* TOP MENU */
+.menu-wrapper {
+  background-color: $color-bg;
+}
+
+.top-menu {
+  width: 950px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.top-menu-i {
+  display: inline-block;
+  margin-left: 25px;
+  padding: 5px 0;
+  a {
+    font: 300 normal 12px/24px $font-strong;
+    color: $color-main;
+  }
+  &:first-child {
+    margin-left: 0;
+    a {
+      &:before {
+        content: "";
+        display: inline-block;
+        width: sprite-width($icons, map);
+        height: sprite-height($icons, map);
+        margin-bottom: -2px;
+        padding-right: 6px;
+        background: sprite($icons, map) no-repeat;
+      }
+      &:hover {
+        &:before { background-position: sprite-position($icons, map-hv); }
+      }
+    }
+  }
+
+  &:nth-child(3) { margin-left: 412px; }
+
+  .icons-profile,
+  .icons-search {
+    display: block;
+    margin-bottom: -8px;
+  }
+
+  .icons-profile {
+    width: sprite-width($icons, profile);
+    height: sprite-height($icons, profile);
+    background: sprite($icons, profile);
+    &:hover { background-position: sprite-position($icons, profile-hv); }
+  }
+  .icons-search {
+    width: sprite-width($icons, search);
+    height: sprite-height($icons, search);
+    background: sprite($icons, search);
+    &:hover { background-position: sprite-position($icons, search-hv); }
+  }
+}
+/* / top-menu */
+
+/* HEADER NAVIGATION */
+.header-nav {
+  .nav-l {
+    display: block;
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 84px;
+    padding-bottom: 3px;
+    border-bottom: 4px solid $color-big;
+  }
+
+  .nav-i {
+    display: inline-block;
+    margin-left: 51px;
+    &:first-child { margin-left: 65px; }
+    a {
+      font: bold normal 16px/46px $font-strong;
+      color: $color-big;
+      &:hover { color: $color-hover; }
+    }
+    .active { color: $color-big-active; }
+  }
+}
+
+
+/*
+* END Header styles.
+*
+*/

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Site settings.
+   ========================================================================== */
+
+   /* Typograthy */
+$base-font: "PTSerif", sans-serif;
+/* Основной шрифт */
+
+$font-strong: "SegoeUI", sans-serif;
+/* Используется в H1, текст с Bold uppercase*/
+
+$font-numbers: "bodoni-mt", sans-serif;
+/* Используется только в номерах слайдов */
+
+$base-font-size: 16px;
+$base-line-height: 26px;
+
+    /* Colors */
+$color-big: #000000;
+/* Используем для заголовков, важного текста, h1 */
+
+$color-main: #333333;
+/* Основной текст, h2*/
+
+$color-white: #fff;
+/* Цвет текста в слайдере */
+
+$color-dark: #666666;
+/* Цвет текста в top-menu */
+
+$color-hover: #f05757;
+/* Цвет при наведении */
+
+$color-big-active: #929292;
+/* Цвет активного раздела меню */
+
+$color-bg: #ededed;
+/* Цвет бэкграунда top-menu и f-bottom */
+

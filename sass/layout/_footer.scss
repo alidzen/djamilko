@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Footer styles.
+   ========================================================================== */
+
+.footer {
+  margin-top: 79px;
+  background-color: $color-bg;
+}
+/* FOOTER NAVIGATION */
+.footer-nav {
+  float: left;
+  ul {
+    display: inline-block;
+    width: 140px;
+    margin: 34px 0 0 15px;
+    line-height: 30px;
+    &:first-of-type { margin-left: 330px;}
+    a {
+      text-decoration: none;
+      color: $color-big;
+      &:hover { color: $color-hover; }
+    }
+  }
+}
+/* / FOOTER NAVIGATION */
+
+/* callback */
+.callback {
+  float: right;
+  margin: 34px 322px 118px 0;
+  text-align: center;
+  font: 300 normal 24px/24px $font-strong;
+  li:first-child { padding-bottom: 20px; }
+}
+/* / callback */
+
+/* footer-bottom */
+.footer-bottom {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin-top: 117px;
+  background-color: #000000;
+  clear: both;
+  vertical-align: middle;
+  .social-l {
+    position: relative;
+    display: block;
+    width: 92px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    li {
+      float: left;
+      height: 20px;
+      &:not(:first-child) { margin-left: 20px;}
+      margin-top: 28px;
+    }
+    a {
+      display: block;
+      height: inherit;
+    }
+    .fb {
+      width: sprite-width($icons, fb);
+      background: sprite($icons, fb);
+      &:hover { background-position: sprite-position($icons, fb-hv); }
+    }
+    .inst {
+      width: sprite-width($icons, inst);
+      background: sprite($icons, inst);
+      &:hover { background-position: sprite-position($icons, inst-hv); }
+    }
+    .tw {
+      width: sprite-width($icons, tw);
+      background: sprite($icons, tw, 0, 1px);
+      &:hover { background-position: sprite-position($icons, tw-hv, 0, 1px); }
+    }
+  }
+
+  .design-author {
+    float: right;
+    height: 100%;
+    margin-right: 329px;
+    font: 300 normal 14px/24px $font-strong;
+    color: $color-white;
+    a {
+      border-bottom: 1px solid #fff;
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: $color-hover;
+        border-color: $color-hover;
+      }
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+/* / footer-bottom */
+
+/*
+* END Footer styles.
+*
+*/

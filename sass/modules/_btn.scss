@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Button styles
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font: 400 normal 14px/24px $font-strong;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .84px;
+  color: $color-big;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  } /* Фикс-выравнивание по вертикали */
+} /* Одинаковые свойства для всех кнопок*/
+
+
+.btn-base {
+  @extend .btn;
+  width: 179px;
+  height: sprite-height($other, btn-base);
+  background: sprite($other, btn-base) no-repeat;
+  &:hover {
+    background-position: sprite-position($other, btn-base-hv);
+    color: $color-hover;
+  }
+}
+/* Все стандартные кнопки с длинной 178px */
+
+
+
+.btn-white {
+  @extend .btn;
+  width: 179px;
+  height: sprite-height($other, btn-white);
+  background: sprite($other, btn-white) no-repeat;
+  &:hover { background-position: sprite-position($other, btn-grey); }
+}
+/* Белая кнопка, используется в слайдере и карьере */
+
+.btn-callback {
+  @extend .btn;
+  width: sprite-width($other, btn-wide);
+  height: sprite-height($other, btn-wide);
+  background: sprite($other, btn-wide) no-repeat;
+  &:hover {
+    background-position: sprite-position($other, btn-wide-hv);
+    color: $color-hover;
+    }
+}
+/*
+* END Button styles.
+*
+*/

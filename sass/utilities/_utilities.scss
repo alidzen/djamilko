@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Utilities.
+   ========================================================================== */
+
+/* Спрайты */
+$icons: sprite-map("icons/*.png", $spacing: 5px, $layout: horizontal);
+
+$features : sprite-map("features/*.png", $spacing: 15px, $layout: horizontal);
+
+$arrows : sprite-map("arrows/*.png", $spacing: 5px, $layout: vertical);
+
+$other : sprite-map("other/*.png", $spacing: 10px, $layout: horizontal);
+/* ромбы из блока */
+
+$brands: sprite-map("brands/*.png", $spacing: 100px, $layout: horizontal);

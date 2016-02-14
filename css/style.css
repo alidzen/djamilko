@@ -1,0 +1,956 @@
+@charset "UTF-8";
+/* Compass */
+/* Utilities */
+/* ==========================================================================
+   Site settings.
+   ========================================================================== */
+/* Typograthy */
+/* Основной шрифт */
+/* Используется в H1, текст с Bold uppercase*/
+/* Используется только в номерах слайдов */
+/* Colors */
+/* Используем для заголовков, важного текста, h1 */
+/* Основной текст, h2*/
+/* Цвет текста в слайдере */
+/* Цвет текста в top-menu */
+/* Цвет при наведении */
+/* Цвет активного раздела меню */
+/* Цвет бэкграунда top-menu и f-bottom */
+/* ==========================================================================
+   Utilities.
+   ========================================================================== */
+/* Спрайты */
+/* ромбы из блока */
+/* Base */
+/* ==========================================================================
+   Reset styles.
+   ========================================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+* END Reset styles.
+*
+*/
+/* ==========================================================================
+   Base styles.
+   ========================================================================== */
+body {
+  width: 1600px;
+  margin: 0 auto;
+  font: italic normal 16px/26px "PTSerif", sans-serif;
+  color: #333333;
+  background-color: #fff;
+}
+
+h1 {
+  font: normal bold 30px/36px "SegoeUI", sans-serif;
+  color: #000000;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: italic 18px/32px "PTSerif", sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: 16px/30px "PTSerif", sans-serif;
+}
+
+h4 {
+  font: normal 300 36px/46px "SegoeUI", sans-serif;
+  text-transform: uppercase;
+}
+
+/* заголовок в слайдере */
+h5 {
+  font: normal bold 14px/30px "SegoeUI", sans-serif;
+  text-transform: uppercase;
+}
+
+.strong-text {
+  font: normal bold 14px/24px "SegoeUI", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* используется для важного текста */
+.sup {
+  vertical-align: super;
+  font: italic normal 24px/24px "bodoni-mt", sans-serif;
+  letter-spacing: 4.8px;
+  padding-left: 10px;
+}
+
+/* создаем класс для верхнего регистра в слайдерах */
+.link-big {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link-big:hover {
+  color: #f05757;
+}
+
+.clearfix:before, .brands-l li:before, .news-l:before, .clearfix:after, .brands-l li:after, .news-l:after {
+  content: "";
+  display: table;
+}
+.clearfix:after, .brands-l li:after, .news-l:after {
+  clear: both;
+}
+
+/*
+* END Base styles.
+*
+*/
+/* ==========================================================================
+   Fonts.
+   ========================================================================== */
+@font-face {
+  font-family: "PTSerif";
+  src: url("../fonts/ptf55f.eot");
+  src: url("../fonts/ptf55f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf55f.woff") format("woff"), url("../fonts/ptf55f.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url("../fonts/ptf75f.eot");
+  src: url("../fonts/ptf75f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf75f.woff") format("woff"), url("../fonts/ptf75f.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url("../fonts/ptf56f.eot");
+  src: url("../fonts/ptf56f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf56f.woff") format("woff"), url("../fonts/ptf56f.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "PTSerif";
+  src: url("../fonts/ptf76f.eot");
+  src: url("../fonts/ptf76f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf76f.woff") format("woff"), url("../fonts/ptf76f.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUILight.eot");
+  src: url("../fonts/SegoeUILight.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUILight.woff") format("woff"), url("../fonts/SegoeUILight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bodoni-mt";
+  src: url("../fonts/bodoni-mt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+/* Layout */
+/* ==========================================================================
+   Header styles.
+   ========================================================================== */
+/* TOP MENU */
+.menu-wrapper {
+  background-color: #ededed;
+}
+
+.top-menu {
+  width: 950px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.top-menu-i {
+  display: inline-block;
+  margin-left: 25px;
+  padding: 5px 0;
+}
+.top-menu-i a {
+  font: 300 normal 12px/24px "SegoeUI", sans-serif;
+  color: #333333;
+}
+.top-menu-i:first-child {
+  margin-left: 0;
+}
+.top-menu-i:first-child a:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 17px;
+  margin-bottom: -2px;
+  padding-right: 6px;
+  background: url('/img/icons-s30aa1113d0.png') -97px 0 no-repeat;
+}
+.top-menu-i:first-child a:hover:before {
+  background-position: -80px 0;
+}
+.top-menu-i:nth-child(3) {
+  margin-left: 412px;
+}
+.top-menu-i .icons-profile,
+.top-menu-i .icons-search {
+  display: block;
+  margin-bottom: -8px;
+}
+.top-menu-i .icons-profile {
+  width: 17px;
+  height: 16px;
+  background: url('/img/icons-s30aa1113d0.png') -136px 0;
+}
+.top-menu-i .icons-profile:hover {
+  background-position: -114px 0;
+}
+.top-menu-i .icons-search {
+  width: 16px;
+  height: 16px;
+  background: url('/img/icons-s30aa1113d0.png') -179px 0;
+}
+.top-menu-i .icons-search:hover {
+  background-position: -158px 0;
+}
+
+/* / top-menu */
+/* HEADER NAVIGATION */
+.header-nav .nav-l {
+  display: block;
+  width: 950px;
+  margin: 0 auto;
+  margin-top: 84px;
+  padding-bottom: 3px;
+  border-bottom: 4px solid #000000;
+}
+.header-nav .nav-i {
+  display: inline-block;
+  margin-left: 51px;
+}
+.header-nav .nav-i:first-child {
+  margin-left: 65px;
+}
+.header-nav .nav-i a {
+  font: bold normal 16px/46px "SegoeUI", sans-serif;
+  color: #000000;
+}
+.header-nav .nav-i a:hover {
+  color: #f05757;
+}
+.header-nav .nav-i .active {
+  color: #929292;
+}
+
+/*
+* END Header styles.
+*
+*/
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 1600px;
+  height: 588px;
+  background-image: url("../img/top-photo1.jpg");
+  background-position: center;
+  color: #fff;
+}
+
+.slider-text {
+  position: relative;
+  text-align: center;
+}
+.slider-text h4 {
+  width: 540px;
+  margin: 0 auto;
+  padding: 160px 0 18px;
+}
+.slider-text p:first-of-type {
+  width: 630px;
+  margin: 0 auto 46px;
+  font: italic normal 16px/28px "SegoeUI", sans-serif;
+}
+
+.propose-list {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* стилизуем управление слайдером */
+}
+.propose-list li {
+  display: inline-block;
+  height: inherit;
+  text-align: center;
+  vertical-align: middle;
+  /* Хак выравнивания текста */
+}
+.propose-list li:before {
+  content: "";
+  display: inline-block;
+  height: 40%;
+}
+.propose-list li a {
+  text-decoration: none;
+  color: #fff;
+}
+.propose-list .propose-i1 {
+  margin-left: 50px;
+}
+.propose-list .propose-i2 {
+  margin-left: 99px;
+}
+.propose-list .propose-i3 {
+  margin-left: 87.5px;
+}
+.propose-list .propose-i4 {
+  margin-left: 71px;
+}
+.propose-list .propose-i5,
+.propose-list .propose-i6 {
+  margin-left: 92px;
+}
+.propose-list .slider-control {
+  position: relative;
+  display: block;
+  width: 280px;
+  margin-left: 78px;
+  margin-top: -20px;
+}
+.propose-list .slider-control li {
+  display: inline-block;
+  font: italic normal 50px/24px "bodoni-mt", sans-serif;
+}
+.propose-list .slider-control .arrows {
+  position: absolute;
+  width: 20px;
+  height: 38px;
+  cursor: pointer;
+}
+.propose-list .slider-control .left {
+  left: 0;
+  background: url('/img/arrows-s0a4a2f516e.png') 0 -43px no-repeat;
+}
+.propose-list .slider-control .left:hover {
+  background-position: 0 0;
+}
+.propose-list .slider-control .right {
+  right: 0;
+  background: url('/img/arrows-s0a4a2f516e.png') 0 -241px no-repeat;
+}
+.propose-list .slider-control .right:hover {
+  background-position: 0 -198px;
+}
+
+/* / SLIDER */
+/* ABOUT */
+.about {
+  text-align: center;
+}
+.about h1 {
+  position: relative;
+  margin: 88px auto 64px;
+}
+.about h1:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 69px;
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-left: -20px;
+  background: url('/img/other-s1c5ac56e0a.png') -1345px 0 no-repeat;
+}
+.about p {
+  position: relative;
+  width: 802px;
+  margin: 0 auto;
+  line-height: 28px;
+}
+.about p:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 110px;
+  display: block;
+  width: 103px;
+  height: 13px;
+  margin-left: -51.5px;
+  background: url('/img/other-s1c5ac56e0a.png') -1232px 0 no-repeat;
+}
+
+/* features */
+.features {
+  /* / features-list */
+}
+.features h2 {
+  margin-top: 71px;
+}
+.features .features-l {
+  margin: 70px auto 0;
+  font: bold normal 14px/24px "SegoeUI", sans-serif;
+  /* Задаем картинки для каждого элемента */
+}
+.features .features-l li {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 158px;
+  cursor: pointer;
+}
+.features .features-l li:not(:first-child) {
+  margin-left: 88px;
+}
+.features .features-l li:before {
+  content: "";
+  display: block;
+  width: 158px;
+  height: 158px;
+  background: url('/img/features-sbc77303c03.png') -1322.5px 6.5px no-repeat;
+}
+.features .features-l li:hover {
+  color: #f05757;
+}
+.features .features-l li:hover:before {
+  background-position: -1161px 0;
+}
+.features .features-l .features-i2:before {
+  background-position: -656.5px 6.5px;
+}
+.features .features-l .features-i2:hover:before {
+  background-position: -495px 0;
+}
+.features .features-l .features-i3:before {
+  background-position: -1655.5px 6.5px;
+}
+.features .features-l .features-i3:hover:before {
+  background-position: -1494px 0;
+}
+.features .features-l .features-i4:before {
+  background-position: -989.5px 6.5px;
+}
+.features .features-l .features-i4:hover:before {
+  background-position: -828px 0;
+}
+
+/* / features */
+.features-wrapper {
+  position: relative;
+  height: 490px;
+  margin: 90px auto 0;
+  background: url("/img/bg-line.png") no-repeat;
+}
+
+.features-slider {
+  position: relative;
+  width: 735px;
+  height: 475px;
+  margin: 0 auto;
+  background: url("/img/features/big-romb.png") no-repeat 50% 50%;
+  text-align: center;
+  color: #fff;
+  /* Оформим боковые стрелки псевдо элементами */
+}
+.features-slider .slider-number {
+  width: 100%;
+  padding: 86px 0 79px;
+  font: italic normal 50px/24px "bodoni-mt", sans-serif;
+}
+.features-slider p:nth-child(2) {
+  width: 285px;
+  margin-bottom: 88px;
+  line-height: 24px;
+}
+.features-slider a {
+  font: 300 normal 14px/24px "SegoeUI", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+.features-slider a:hover {
+  text-decoration: underline;
+}
+.features-slider:before, .features-slider:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 38px;
+  margin-top: -19px;
+  cursor: pointer;
+}
+.features-slider:before {
+  background: url('/img/arrows-s0a4a2f516e.png') 0 0 no-repeat;
+  left: 0;
+}
+.features-slider:after {
+  background: url('/img/arrows-s0a4a2f516e.png') 0 -198px;
+  right: 0;
+}
+
+/* / ABOUT */
+/* BRANDS */
+.brands {
+  position: relative;
+  width: 963px;
+  margin: 107px auto 100px;
+  text-align: center;
+}
+.brands:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 69px;
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-left: -20px;
+  background: url('/img/other-s1c5ac56e0a.png') -1345px 0 no-repeat;
+}
+.brands .btn-base {
+  margin-top: 38px;
+}
+
+/* Оформляем список brands-list */
+.brands-l {
+  margin: 53px auto 0;
+}
+.brands-l li {
+  float: left;
+}
+.brands-l li a {
+  display: block;
+  width: 240px;
+  height: 240px;
+}
+.brands-l li .brands-i1 {
+  background: url('/img/brands-sdaabe7ee5c.png') 0 0;
+}
+.brands-l li .brands-i2 {
+  background: url('/img/brands-sdaabe7ee5c.png') -1088px 113px;
+}
+.brands-l li .brands-i2:hover {
+  background-position: 0 0;
+}
+.brands-l li .brands-i3 {
+  background: url('/img/brands-sdaabe7ee5c.png') -1369.5px 104.5px;
+}
+.brands-l li .brands-i4 {
+  background: url('/img/brands-sdaabe7ee5c.png') -1631px 108.5px;
+}
+.brands-l li .brands-i5 {
+  background: url('/img/brands-sdaabe7ee5c.png') -1882px 103px;
+}
+.brands-l li .brands-i6 {
+  background: url('/img/brands-sdaabe7ee5c.png') -2127.5px 104px;
+}
+.brands-l li .brands-i7 {
+  background: url('/img/brands-sdaabe7ee5c.png') -2349px 96.5px;
+}
+.brands-l li .brands-i8 {
+  background: url('/img/brands-sdaabe7ee5c.png') -2592.5px 105.5px;
+}
+.brands-l li .brands-i9 {
+  background: url('/img/brands-sdaabe7ee5c.png') -2861.5px 95.5px;
+}
+.brands-l li .brands-i10 {
+  background: url('/img/brands-sdaabe7ee5c.png') -304px 105px;
+}
+.brands-l li .brands-i11 {
+  background: url('/img/brands-sdaabe7ee5c.png') -555.5px 81px;
+}
+.brands-l li .brands-i12 {
+  background: url('/img/brands-sdaabe7ee5c.png') -809px 111.5px;
+}
+
+/* / brands list */
+/* / BRANDS */
+/* CAREER */
+.career {
+  position: relative;
+  width: 1600px;
+  height: 390px;
+  background: url(/img/career-bg.jpg) no-repeat;
+  text-align: center;
+  color: #fff;
+}
+.career h1 {
+  color: inherit;
+  padding-top: 66px;
+  padding-bottom: 66px;
+}
+.career h1:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 135px;
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-left: -20px;
+  background: url('/img/other-s1c5ac56e0a.png') -1182px 0 no-repeat;
+}
+.career .btn-white {
+  margin-top: 39px;
+}
+
+/* /  CAREER */
+/* NEWS */
+.news {
+  width: 1040px;
+  margin: 100px auto 0;
+  text-align: center;
+  /* стилизуем управление слайдером */
+}
+.news h1 {
+  position: relative;
+  margin-bottom: 97px;
+  text-align: inherit;
+}
+.news h1:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 69px;
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-left: -20px;
+  background: url('/img/other-s1c5ac56e0a.png') -1345px 0 no-repeat;
+}
+.news .slider-control {
+  position: relative;
+  display: block;
+  width: 113px;
+  height: 60px;
+  margin: 40px auto;
+}
+.news .slider-control li {
+  display: inline-block;
+}
+.news .slider-control .separator {
+  width: 1px;
+  height: 60px;
+  border-left: 1px solid #adadad;
+  border-collapse: collapse;
+}
+.news .slider-control .arrows {
+  position: absolute;
+  top: 50%;
+  margin-top: -11.5px;
+  width: 20px;
+  height: 23px;
+  cursor: pointer;
+}
+.news .slider-control .left {
+  left: 0;
+  background: url('/img/arrows-s0a4a2f516e.png') 0 -114px no-repeat;
+}
+.news .slider-control .left:hover {
+  background-position: 0 -86px;
+}
+.news .slider-control .right {
+  right: 0;
+  background: url('/img/arrows-s0a4a2f516e.png') 0 -170px no-repeat;
+}
+.news .slider-control .right:hover {
+  background-position: 0 -142px;
+}
+
+.news-l [class^="news-i"] {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  margin-left: 20px;
+  background-color: #f9f9f9;
+}
+.news-l [class^="news-i"]:first-of-type {
+  margin-left: 50px;
+}
+.news-l [class^="news-i"]:hover {
+  background-color: #e2e2e2;
+}
+.news-l [class^="news-i"] a {
+  text-decoration: none;
+}
+.news-l [class^="news-i"] a:hover:after {
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  content: "";
+  display: block;
+  width: 401px;
+  height: 401px;
+  background: url('/img/other-s1c5ac56e0a.png') -1395px 0 no-repeat;
+}
+.news-l [class^="news-i"] img {
+  width: 300px;
+  height: 180px;
+}
+.news-l [class^="news-i"] h5, .news-l [class^="news-i"] p {
+  color: #000000;
+  padding: 7px 20px 0 20px;
+  text-align: left;
+}
+.news-l [class^="news-i"] p {
+  padding-bottom: 15px;
+}
+
+/* / NEWS */
+/*
+* END Main
+*
+*/
+/* ==========================================================================
+   Footer styles.
+   ========================================================================== */
+.footer {
+  margin-top: 79px;
+  background-color: #ededed;
+}
+
+/* FOOTER NAVIGATION */
+.footer-nav {
+  float: left;
+}
+.footer-nav ul {
+  display: inline-block;
+  width: 140px;
+  margin: 34px 0 0 15px;
+  line-height: 30px;
+}
+.footer-nav ul:first-of-type {
+  margin-left: 330px;
+}
+.footer-nav ul a {
+  text-decoration: none;
+  color: #000000;
+}
+.footer-nav ul a:hover {
+  color: #f05757;
+}
+
+/* / FOOTER NAVIGATION */
+/* callback */
+.callback {
+  float: right;
+  margin: 34px 322px 118px 0;
+  text-align: center;
+  font: 300 normal 24px/24px "SegoeUI", sans-serif;
+}
+.callback li:first-child {
+  padding-bottom: 20px;
+}
+
+/* / callback */
+/* footer-bottom */
+.footer-bottom {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin-top: 117px;
+  background-color: #000000;
+  clear: both;
+  vertical-align: middle;
+}
+.footer-bottom .social-l {
+  position: relative;
+  display: block;
+  width: 92px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.footer-bottom .social-l li {
+  float: left;
+  height: 20px;
+  margin-top: 28px;
+}
+.footer-bottom .social-l li:not(:first-child) {
+  margin-left: 20px;
+}
+.footer-bottom .social-l a {
+  display: block;
+  height: inherit;
+}
+.footer-bottom .social-l .fb {
+  width: 10px;
+  background: url('/img/icons-s30aa1113d0.png') -15px 0;
+}
+.footer-bottom .social-l .fb:hover {
+  background-position: 0 0;
+}
+.footer-bottom .social-l .inst {
+  width: 20px;
+  background: url('/img/icons-s30aa1113d0.png') -55px 0;
+}
+.footer-bottom .social-l .inst:hover {
+  background-position: -30px 0;
+}
+.footer-bottom .social-l .tw {
+  width: 22px;
+  background: url('/img/icons-s30aa1113d0.png') -227px 1px;
+}
+.footer-bottom .social-l .tw:hover {
+  background-position: -200px 1px;
+}
+.footer-bottom .design-author {
+  float: right;
+  height: 100%;
+  margin-right: 329px;
+  font: 300 normal 14px/24px "SegoeUI", sans-serif;
+  color: #fff;
+}
+.footer-bottom .design-author a {
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-bottom .design-author a:hover {
+  color: #f05757;
+  border-color: #f05757;
+}
+.footer-bottom .design-author:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* / footer-bottom */
+/*
+* END Footer styles.
+*
+*/
+/* Modules */
+/* ==========================================================================
+   Button styles
+   ========================================================================== */
+.btn, .btn-base, .btn-white, .btn-callback {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font: 400 normal 14px/24px "SegoeUI", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .84px;
+  color: #000000;
+  /* Фикс-выравнивание по вертикали */
+}
+.btn:before, .btn-base:before, .btn-white:before, .btn-callback:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* Одинаковые свойства для всех кнопок*/
+.btn-base {
+  width: 179px;
+  height: 36px;
+  background: url('/img/other-s1c5ac56e0a.png') -188px 0 no-repeat;
+}
+.btn-base:hover {
+  background-position: 0 0;
+  color: #f05757;
+}
+
+/* Все стандартные кнопки с длинной 178px */
+.btn-white {
+  width: 179px;
+  height: 36px;
+  background: url('/img/other-s1c5ac56e0a.png') -564px 0 no-repeat;
+}
+.btn-white:hover {
+  background-position: -376px 0;
+}
+
+/* Белая кнопка, используется в слайдере и карьере */
+.btn-callback {
+  width: 205px;
+  height: 36px;
+  background: url('/img/other-s1c5ac56e0a.png') -967px 0 no-repeat;
+}
+.btn-callback:hover {
+  background-position: -752px 0;
+  color: #f05757;
+}
+
+/*
+* END Button styles.
+*
+*/
